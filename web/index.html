@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="formulario">
+            <div class="titulo"></div>
+            <div class="contenido">
+                <table id="Table"></table>
+            </div>
+        </div>
+        <script src="content/jquery-3.6.0.js" type="text/javascript"></script>
+        <script>
+            $(function () {
+                $.ajax({
+                    url: "https://datos.gob.mx/busca/api/3/action/package_search?q=naicm",
+                    type: "GET",
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data);
+                        /*var DatosJson = JSON.parse(JSON.stringify(data['result']));
+                        for (i = 0; i < DatosJson.results.length; i++) {
+                            $("#Table").append('<tr>' +
+                                    '<td align="center" style="dislay: none;">' + DatosJson.results[i].id + '</td>' +
+                                    '<td align="center" style="dislay: none;">' + DatosJson.results[i].metadata_created + '</td>' +
+                                    '<td align="center" style="dislay: none;">' + DatosJson.results[i].metadata_modified + '</td>' +
+                                    '<td align="center" style="dislay: none;">' + DatosJson.results[i].state + '</td>' + '</tr>');
+                        }*/
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
