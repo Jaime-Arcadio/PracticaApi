@@ -25,15 +25,14 @@ and open the template in the editor.
                     type: "GET",
                     dataType: 'json',
                     success: function (data) {
-                        console.log(data);
-                        /*var DatosJson = JSON.parse(JSON.stringify(data['result']));
+                        var DatosJson = JSON.parse(JSON.stringify(data['result']));
                         for (i = 0; i < DatosJson.results.length; i++) {
                             $("#Table").append('<tr>' +
                                     '<td align="center" style="dislay: none;">' + DatosJson.results[i].id + '</td>' +
                                     '<td align="center" style="dislay: none;">' + DatosJson.results[i].metadata_created + '</td>' +
                                     '<td align="center" style="dislay: none;">' + DatosJson.results[i].metadata_modified + '</td>' +
                                     '<td align="center" style="dislay: none;">' + DatosJson.results[i].state + '</td>' + '</tr>');
-                        }*/
+                        }
                     }
                 });
             });
